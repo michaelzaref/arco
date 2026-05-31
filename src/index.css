@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-arco-bg text-arco-text font-body antialiased;
+  }
+
+  ::selection {
+    @apply bg-arco-accent/30 text-white;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-arco-accent via-cyan-300 to-arco-violet bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply border border-arco-border/60 bg-arco-surface/40 backdrop-blur-xl;
+  }
+
+  .glow-ring {
+    box-shadow:
+      0 0 0 1px rgba(34, 211, 238, 0.1),
+      0 0 40px -10px rgba(34, 211, 238, 0.25);
+  }
+}
